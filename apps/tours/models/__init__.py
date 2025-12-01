@@ -1,0 +1,1 @@
+from .tours import Tour
