@@ -36,11 +36,14 @@ class LoginView(APIView):
         serializer.is_valid(raise_exception=True)
         return Response(serializer.validated_data, status=status.HTTP_200_OK)
     
-    
+
 class ListUserView(generics.ListAPIView):
     serializer_class = RegisterSerializer
     queryset = RegisterSerializer.Meta.model.objects.all()
+
+
     
     
-    
-    
+
+  
+

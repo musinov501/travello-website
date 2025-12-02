@@ -14,6 +14,7 @@ urlpatterns = [
     path('register-device/', RegisterDeviceView.as_view(), name='register_device'),
     path('list-devices/', DeviceListView.as_view(), name='list_devices')
     
-
+    
 ]
+
 

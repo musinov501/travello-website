@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'apps.hotels',
     'apps.tours',
     'apps.shared',
+    'apps.testimonials'
 ]
 
 
