@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_simplejwt',
     'drf_spectacular',
-    'modeltranslation',
+    # 'modeltranslation',
 
 
     'apps.users',
@@ -50,7 +50,8 @@ INSTALLED_APPS = [
     'apps.hotels',
     'apps.tours',
     'apps.shared',
-    'apps.testimonials'
+    'apps.testimonials',
+    'apps.bookings'
 ]
 
 
