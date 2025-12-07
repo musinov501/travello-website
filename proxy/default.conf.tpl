@@ -1,0 +1,17 @@
+server {
+    listen 80;
+
+    location /static/ {
+        alias /vol/static/;
+    }
+
+    location /media/ {
+        alias /vol/web/media/;
+    }
+
+    location / {
+        proxy_pass http://app:9000;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+}
