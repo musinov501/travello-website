@@ -1,19 +1,23 @@
-from django.http import HttpRequest, HttpResponse
 from rest_framework.views import APIView
+from rest_framework import serializers
 from rest_framework.response import Response
 from rest_framework import generics, status
+from rest_framework.permissions import AllowAny, IsAuthenticated
 from apps.users.serializers.user_auth_serializer import RegisterSerializer, LoginSerializer
-from rest_framework_simplejwt.tokens import RefreshToken
+from django.contrib.auth import get_user_model
+
+
+User = get_user_model()
 
 
 class RegisterView(generics.CreateAPIView):
     serializer_class = RegisterSerializer
+    permission_classes = [AllowAny]
     
     def create(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         user = serializer.save()
-        
         
         data = {
             "message": "User registered successfully",
@@ -26,24 +30,19 @@ class RegisterView(generics.CreateAPIView):
                 "email": user.email,
             },
         }
+        return Response(data, status=status.HTTP_201_CREATED)
 
-        return Response(data)
-    
-    
+
 class LoginView(APIView):
+    permission_classes = [AllowAny]
+    
     def post(self, request):
         serializer = LoginSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         return Response(serializer.validated_data, status=status.HTTP_200_OK)
-    
+
 
 class ListUserView(generics.ListAPIView):
     serializer_class = RegisterSerializer
-    queryset = RegisterSerializer.Meta.model.objects.all()
-
-
-    
-    
-
-  
-
+    permission_classes = [IsAuthenticated]
+    queryset = User.objects.all()
