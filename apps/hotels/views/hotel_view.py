@@ -69,9 +69,45 @@ class HotelUpdateView(generics.UpdateAPIView):
     permission_classes = [permissions.IsAdminUser]
     
     
+    def update(self, request, *args, **kwargs):
+        try:
+            instance = self.get_object()
+        except Exception:
+            return CustomResponse.not_found(request=request)
+        
+        serializer = self.get_serializer(instance, data=request.data, partial=True)
+        
+        if not serializer.is_valid():
+            return CustomResponse.validation_error(
+                request=request,
+                errors=serializer.errors
+            )
+        
+        serializer.save()
+        return CustomResponse.success(
+            message_key="UPDATED",
+            request=request,
+            data=request.data
+        )
+    
 
 
 class HotelDeleteView(generics.DestroyAPIView):
     queryset = Hotel.objects.all()
     serializer_class = HotelSerializer
     permission_classes = [permissions.IsAdminUser]
+
+
+    def destroy(self, request, *args, **kwargs):
+        try:
+            instance = self.get_object()
+        except Exception:
+            return CustomResponse.not_found(request=request)
+        
+        instance.delete()
+        
+        return CustomResponse.success(
+            message_key="DELETED",
+            request=request
+        )
+        

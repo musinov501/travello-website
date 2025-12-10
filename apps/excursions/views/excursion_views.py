@@ -14,7 +14,7 @@ class ExcursionListView(generics.ListAPIView):
         return CustomResponse.success(
             request=request,
             data=serializer.data
-        )
+        )   
 
 
 class ExcursionDetailView(generics.RetrieveAPIView):
