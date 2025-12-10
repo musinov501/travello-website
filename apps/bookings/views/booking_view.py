@@ -1,4 +1,4 @@
-# apps/bookings/views/booking_views.py
+
 from rest_framework import generics, status
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
@@ -28,7 +28,7 @@ class BookingCreateView(generics.CreateAPIView):
             },
             status=status.HTTP_201_CREATED
         )
-# views.py
+
 class BookingListView(generics.ListAPIView):
     serializer_class = BookingSerializer
     permission_classes = [IsAuthenticated]
@@ -67,7 +67,7 @@ class BookingDetailView(generics.RetrieveAPIView):
     def retrieve(self, request, *args, **kwargs):
         booking = self.get_object()
 
-        # Ensure user is owner
+       
         if booking.user != request.user:
             return Response(
                 {"success": False, "message": "Not authorized"},
@@ -88,7 +88,7 @@ class BookingCancelView(generics.UpdateAPIView):
     def update(self, request, *args, **kwargs):
         booking = self.get_object()
 
-        # Ensure user is owner
+      
         if booking.user != request.user:
             return Response(
                 {"success": False, "message": "Not authorized"},
@@ -101,7 +101,7 @@ class BookingCancelView(generics.UpdateAPIView):
                 status=status.HTTP_400_BAD_REQUEST
             )
 
-        # Restore rooms if hotel booking
+       
         if booking.hotel:
             booking.hotel.available_rooms += booking.guests
             booking.hotel.save()
