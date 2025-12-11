@@ -113,4 +113,3 @@ class TestimonialDeleteView(generics.DestroyAPIView):
             data={"id": testimonial_id}
         )
 
-
