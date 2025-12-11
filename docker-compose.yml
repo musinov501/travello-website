@@ -1,10 +1,10 @@
-version: "3.9"
+# version: "3.9"
 services:
   web:
     build: .
     container_name: django_app
     restart: always
-    command: gunicorn core.wsgi:application --bind 0.0.0.0:8000  # Changed from project to core
+    command: gunicorn core.wsgi:application --bind 0.0.0.0:8000  
     volumes:
       - static_volume:/app/static
       - media_volume:/app/media
