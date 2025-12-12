@@ -73,8 +73,8 @@ docker-compose exec django_app python manage.py createsuperuser
 
 ### 4️⃣ Access the website
 
--   **Frontend:** http://localhost\
--   **Admin panel:** http://localhost/admin
+-   **Swaggers:** http://167.71.59.122/api/v1/docs/
+-   **Admin panel:** http://167.71.59.122/admin
 
 ## 🔧 Technologies Used
 
