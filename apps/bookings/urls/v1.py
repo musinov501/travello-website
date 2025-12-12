@@ -8,3 +8,5 @@ urlpatterns = [
     path('<str:booking_type>/', BookingListView.as_view(), name='booking-list-by-type'),
     path('', BookingListView.as_view(), name='booking-list-all'),  
 ]
+
+
