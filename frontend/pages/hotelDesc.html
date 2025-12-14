@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tavello</title>
+    <link rel="icon" href="../assets/logo.png" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/tourDetails.css" />
+    <link rel="stylesheet" href="../css/hotelDesc.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/lenis@1.3.13/dist/lenis.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <a href="#">
+        <img src="../assets/images/logoWithText.png" alt="Logo" />
+      </a>
+
+      <ul>
+        <a href="../index.html"> Home </a>
+        <a href="../index.html#about"> About </a>
+        <a href="../index.html#service"> Services </a>
+        <a href="../index.html#tour"> Tours </a>
+        <a href="#contact"> Contact </a>
+      </ul>
+
+      <button><a href="./login.html">Log in</a></button>
+    </header>
+
+    <div class="galleryGrid">
+      <div class="galleryCard">
+        <img src="../assets/images/hotel.jpg" alt="" />
+      </div>
+      <div class="galleryCard">
+        <img src="../assets/images/about-banner.jpg" alt="" />
+      </div>
+      <div class="galleryCard">
+        <img src="../assets/images/event.jpg" alt="" />
+      </div>
+    </div>
+
+    <!-- ! /////////////////////////////////////////////////////////// -->
+    <!-- ! /////////////////////////////////////////////////////////// -->
+    <!-- ! /////////////////////////////////////////////////////////// -->
+
+    <div class="tourDetailsInfo">
+      <div class="tourDetailsText">
+        <div class="detailsTitle">
+          <ul>
+            <h1>Hotel Zarafshon</h1>
+            <ul>
+              <p>
+                <svg width="34" height="45" viewBox="0 0 34 45" fill="none">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M15.4318 44.3882C15.4318 44.3882 0 30.9046 0 17.6371C0 12.9595 1.79107 8.47339 4.97919 5.16579C8.1673 1.85819 12.4913 0 17 0C21.5087 0 25.8327 1.85819 29.0208 5.16579C32.2089 8.47339 34 12.9595 34 17.6371C34 30.9046 18.5683 44.3882 18.5683 44.3882C17.7098 45.2083 16.2966 45.1995 15.4318 44.3882ZM17 25.3534C17.9767 25.3534 18.9438 25.1538 19.8462 24.766C20.7486 24.3782 21.5685 23.8098 22.2591 23.0933C22.9497 22.3768 23.4976 21.5262 23.8714 20.59C24.2451 19.6538 24.4375 18.6504 24.4375 17.6371C24.4375 16.6238 24.2451 15.6204 23.8714 14.6842C23.4976 13.7481 22.9497 12.8974 22.2591 12.1809C21.5685 11.4644 20.7486 10.896 19.8462 10.5082C18.9438 10.1205 17.9767 9.92088 17 9.92088C15.0275 9.92088 13.1357 10.7338 11.7409 12.1809C10.3461 13.628 9.5625 15.5906 9.5625 17.6371C9.5625 19.6836 10.3461 21.6462 11.7409 23.0933C13.1357 24.5404 15.0275 25.3534 17 25.3534Z"
+                    fill="var(--accent_clr)"
+                  />
+                </svg>
+
+                Uzbekistan, Tashkent
+              </p>
+              <p>
+                <img src="../assets/svg/star.svg" alt="" />
+                5.0
+              </p>
+            </ul>
+          </ul>
+          <h1>$300<span>USD</span></h1>
+        </div>
+        <div class="textarea">
+          <h2>Description:</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
+            voluptate non laborum molestias repudiandae minima nihil expedita
+            ea. Suscipit quia doloribus doloremque perspiciatis corporis
+            deleniti voluptatibus nulla voluptatum in, tempore obcaecati
+            dignissimos omnis explicabo consectetur pariatur quod minima
+            recusandae libero nisi ut ipsam
+          </p>
+        </div>
+
+        <h2>Key features:</h2>
+        <div class="productFeatures">
+          <div class="featureCard">
+            <img src="../assets/svg/bed.svg" alt="" />
+            <p>2 beds</p>
+          </div>
+          <div class="featureCard">
+            <img src="../assets/svg/parking.svg" alt="" />
+            <p>Parking</p>
+          </div>
+          <div class="featureCard">
+            <img src="../assets/svg/bath.svg" alt="" />
+            <p>2 baths</p>
+          </div>
+          <div class="featureCard">
+            <img src="../assets/svg/kitchen.svg" alt="" />
+            <p>Kitchen</p>
+          </div>
+          <div class="featureCard">
+            <img src="../assets/svg/balcony.svg" alt="" />
+            <p>Balcony</p>
+          </div>
+        </div>
+
+        <div class="commentContainer">
+          <div class="commentPreview">
+            <ul>
+              <img src="../assets/svg/comment.svg" alt="" />
+              <h1>Comments</h1>
+            </ul>
+            <img src="../assets/svg/downArrow.svg" alt="" />
+          </div>
+
+          <div class="userComment">
+            <div class="commenterProfile">
+              <img src="../assets/images/grid-layout (1).jpg" alt="" />
+              <h1>User69</h1>
+              <div class="commentRating">
+                <img src="../assets/svg/star.svg" alt="" />
+                <p>5.0</p>
+              </div>
+            </div>
+            <p id="comment">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Molestiae totam minus dicta magnam, saepe vel hic quas nesciunt
+              exercitationem. Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Blanditiis sunt, aliquid qui, pariatur dicta, ea rem error
+              officiis excepturi architecto quas nulla cumque enim unde ex sint
+              quis natus eos.minus dicta magnam, saepe vel hic quas nesciunt
+              exercitationem. minus dicta magnam, saepe vel hic quas nesciunt
+              exercitationem.
+            </p>
+          </div>
+
+          <div class="userComment">
+            <div class="commenterProfile">
+              <img src="../assets/images/grid-layout (1).jpg" alt="" />
+              <h1>Ronaldo</h1>
+              <div class="commentRating">
+                <img src="../assets/svg/star.svg" alt="" />
+                <p>5.1</p>
+              </div>
+            </div>
+            <p id="comment">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Molestiae totam
+            </p>
+          </div>
+
+          <div class="userComment">
+            <div class="commenterProfile">
+              <img src="../assets/images/grid-layout (1).jpg" alt="" />
+              <h1>Chiyabo'ri</h1>
+              <div class="commentRating">
+                <img src="../assets/svg/star.svg" alt="" />
+                <p>4.8</p>
+              </div>
+            </div>
+            <p id="comment">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Molestiae totam minus dicta magnam, saep totam minus dicta magnam,
+              saepe vel hic quas nesciunt exercitationem.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="sellerInfo">
+        <h3>Details:</h3>
+        <label for="date">
+          <ul>
+            <img src="../assets/svg/calendar.svg" alt="" />
+            Dates:
+          </ul>
+          <span>
+            <input type="date" id="date" />
+            <img src="../assets/svg/switch.svg" alt="" />
+            <input type="date" id="date" />
+          </span>
+        </label>
+
+        <label for="person">
+          <ul>
+            <img src="../assets/svg/peers.svg" alt="" />
+            Person:
+          </ul>
+          <span>
+            <input type="number" id="person" value="1" min="1" max="10" />
+          </span>
+        </label>
+
+        <label for="price">
+          <ul>
+            <img src="../assets/svg/coin.svg" alt="" />
+            Price:
+          </ul>
+          <h1>$1203</h1>
+        </label>
+        <button><a href="../pages/booking.html">Book now</a></button>
+      </div>
+    </div>
+
+    <!-- ! /////////////////////////////////////////////////////////// -->
+    <!-- ! /////////////////////////////////////////////////////////// -->
+    <!-- ! /////////////////////////////////////////////////////////// -->
+
+    <footer id="contact">
+      <div class="footerPrimary">
+        <div class="footerLogo">
+          <img src="../assets/logo.png" alt="" />
+          <h1>Tra<span>vello</span></h1>
+        </div>
+        <ul>
+          <a href="#"><img src="../assets/svg/facebook.svg" alt="" /></a>
+          <a href="#"><img src="../assets/svg/x.svg" alt="" /></a>
+          <a href="#"><img src="../assets/svg/instagram.svg" alt="" /></a>
+          <a href="#"><img src="../assets/svg/linkedIn.svg" alt="" /></a>
+        </ul>
+      </div>
+
+      <div class="footerLinks">
+        <ul>
+          <b>Quick links</b>
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Services</a>
+          <a href="#">Tours</a>
+          <a href="#">Sign in</a>
+        </ul>
+        <ul>
+          <b>Support</b>
+          <a href="#">Contact us</a>
+          <a href="#">FAQs</a>
+        </ul>
+      </div>
+
+      <div class="footerInput">
+        <h1>Get updates</h1>
+        <div>
+          <input type="email" placeholder="Enter your email" />
+          <button>Submit</button>
+        </div>
+        <ul>
+          <a href="#">Privacy & policy</a>
+          <a href="#">Terms of service</a>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/lenis@1.3.13/dist/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+    <script>
+      const commentContainer = document.querySelector(".commentContainer");
+      const commentbtn = document.querySelector(".commentPreview");
+
+      commentbtn.addEventListener("click", function () {
+        commentContainer.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>

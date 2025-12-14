@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tavello</title>
+    <link rel="icon" href="../assets/logo.png" />
+    <link rel="stylesheet" href="../css/login.css" />
+  </head>
+  <body>
+    <nav>
+      <button>Sign up</button>
+      <button>Log in</button>
+    </nav>
+    <form>
+      <div class="formWrapper">
+        <div class="signUpContainer">
+          <h1>Sign up</h1>
+          <br />
+          <label for="name">
+            First Name
+            <input type="text" id="name" />
+          </label>
+
+          <label for="lastname">
+            Last Name
+            <input type="text" id="lastname" />
+          </label>
+
+          <label for="email">
+            Your Email
+            <input type="email" id="email" />
+          </label>
+
+          <label for="password">
+            Set a strong password
+            <input type="password" id="password" />
+          </label>
+
+          <label for="password2">
+            Repeat your password
+            <input type="password" id="password2" />
+          </label>
+
+          <div>
+            <input type="checkbox" id="terms" required />
+            <label for="terms"> Agree to the terms and conditions </label>
+          </div>
+          <button id="submitBtn">Submit</button>
+        </div>
+        <div class="logInContainer">
+          <h1>Log in</h1>
+          <br />
+          <label for="email2">
+            Your Email
+            <input type="email2" id="email" />
+          </label>
+          <label for="password3">
+            Enter your password
+            <input type="password" id="password3" />
+          </label>
+          <button>
+            <a href="../index.html">Submit</a>
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <script>
+      const form = document.querySelector("form");
+      const formSwitch = document.querySelector("nav");
+
+      formSwitch.addEventListener("click", function () {
+        form.classList.toggle("active");
+        formSwitch.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tavello</title>
+    <link rel="icon" href="../assets/logo.png" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/discover.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/lenis@1.3.13/dist/lenis.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <a href="#">
+        <img src="../assets/images/logoWithText.png" alt="Logo" />
+      </a>
+
+      <ul>
+        <a href="../index.html"> Home </a>
+        <a href="../index.html#about"> About </a>
+        <a href="../index.html#service"> Services </a>
+        <a href="../index.html#tour"> Tours </a>
+        <a href="#contact"> Contact </a>
+      </ul>
+
+      <button><a href="./login.html">Log in</a></button>
+    </header>
+
+    <div class="banner">
+      <img src="../assets/images/discover-banner.jpg" alt="" />
+      <h1>Discover</h1>
+      <p>
+        World’s best travel agency <br />
+        since 2025
+      </p>
+    </div>
+
+    <!-- ! /////////////////////////////////////////////////////////// -->
+    <!-- ! /////////////////////////////////////////////////////////// -->
+    <!-- ! /////////////////////////////////////////////////////////// -->
+
+    <section id="location">
+      <div class="title">
+        <ul>
+          <p>Best locations</p>
+          <h1><span>Welcome</span> to Iceland</h1>
+        </ul>
+        <button><a href="#">Learn more</a></button>
+      </div>
+
+      <div class="grid_layout">
+        <div class="layout_card">
+          <img src="../assets/images/grid-layout (1).jpg" alt="Vik, Iceland" />
+          <h1>Vik, Iceland</h1>
+        </div>
+        <div class="layout_card">
+          <img
+            src="../assets/images/grid-layout (2).jpg"
+            alt="Akureyi, Iceland"
+          />
+          <h1>Akureyi, Iceland</h1>
+        </div>
+        <div class="layout_card">
+          <img
+            src="../assets/images/grid-layout (3).jpg"
+            alt="Seljalandsfoss"
+          />
+          <h1>Seljalandsfoss</h1>
+        </div>
+        <div class="layout_card">
+          <img
+            src="../assets/images/grid-layout (4).jpg"
+            alt="Fjaðrárgljúfur Canyon"
+          />
+          <h1>Fjaðrárgljúfur Canyon</h1>
+        </div>
+      </div>
+    </section>
+
+    <div class="discoverContainer">
+      <div class="searchXfilter">
+        <select id="filter">
+          <option value="all">all</option>
+          <option value="hotels">hotels</option>
+          <option value="tours">tours</option>
+          <option value="destinations">destinations</option>
+          <option value="excursions">excursions</option>
+        </select>
+        <div class="search">
+          <img src="../assets/svg/search.svg" alt="" />
+          <input type="text" id="search" placeholder="Search here" />
+        </div>
+      </div>
+    </div>
+
+    <div class="cardGrid">
+      <div class="hotelCard hotels">
+        <div class="hotelImg">
+          <img src="../assets/images/hotel.jpg" alt="" />
+        </div>
+        <div class="hotelInfo">
+          <div class="rating"></div>
+          <h1>Tropica Paradise Resort</h1>
+          <p>
+            <img src="../assets/svg/cardLocation.svg" alt="" />
+            Dominican Republic
+          </p>
+          <p>
+            <img src="../assets/svg/peers.svg" alt="" />
+            Any
+          </p>
+          <p>
+            <img src="../assets/svg/calendar.svg" alt="" />
+            Any
+          </p>
+          <ul>
+            <p>
+              <img src="../assets/svg/coin.svg" alt="" />
+              <b>$175</b>
+            </p>
+            <button>View</button>
+          </ul>
+        </div>
+      </div>
+
+      <div class="hotelCard hotels">
+        <div class="hotelImg">
+          <img src="../assets/images/hotel.jpg" alt="" />
+        </div>
+        <div class="hotelInfo">
+          <div class="rating"></div>
+          <h1>Ocean View Sanctuary</h1>
+          <p>
+            <img src="../assets/svg/cardLocation.svg" alt="" />
+            Dominican Republic
+          </p>
+          <p>
+            <img src="../assets/svg/peers.svg" alt="" />
+            Any
+          </p>
+          <p>
+            <img src="../assets/svg/calendar.svg" alt="" />
+            Any
+          </p>
+          <ul>
+            <p>
+              <img src="../assets/svg/coin.svg" alt="" />
+              <b>$175</b>
+            </p>
+            <button>View</button>
+          </ul>
+        </div>
+      </div>
+
+      <div class="hotelCard hotels">
+        <div class="hotelImg">
+          <img src="../assets/images/hotel.jpg" alt="" />
+        </div>
+        <div class="hotelInfo">
+          <div class="rating"></div>
+          <h1>Golden Sunset Boutique</h1>
+          <p>
+            <img src="../assets/svg/cardLocation.svg" alt="" />
+            Dominican Republic
+          </p>
+          <p>
+            <img src="../assets/svg/peers.svg" alt="" />
+            Any
+          </p>
+          <p>
+            <img src="../assets/svg/calendar.svg" alt="" />
+            Any
+          </p>
+          <ul>
+            <p>
+              <img src="../assets/svg/coin.svg" alt="" />
+              <b>$175</b>
+            </p>
+            <button>View</button>
+          </ul>
+        </div>
+      </div>
+
+      <div class="hotelCard hotels">
+        <div class="hotelImg">
+          <img src="../assets/images/hotel.jpg" alt="" />
+        </div>
+        <div class="hotelInfo">
+          <div class="rating"></div>
+          <h1>Beachfront Elegance</h1>
+          <p>
+            <img src="../assets/svg/cardLocation.svg" alt="" />
+            Dominican Republic
+          </p>
+          <p>
+            <img src="../assets/svg/peers.svg" alt="" />
+            Any
+          </p>
+          <p>
+            <img src="../assets/svg/calendar.svg" alt="" />
+            Any
+          </p>
+          <ul>
+            <p>
+              <img src="../assets/svg/coin.svg" alt="" />
+              <b>$175</b>
+            </p>
+            <button>View</button>
+          </ul>
+        </div>
+      </div>
+
+      <div class="hotelCard tours">
+        <div class="hotelImg">
+          <img src="../assets/images/hotel.jpg" alt="" />
+        </div>
+        <div class="hotelInfo">
+          <div class="rating"></div>
+          <h1>Caribbean Explorer Tours</h1>
+          <p>
+            <img src="../assets/svg/cardLocation.svg" alt="" />
+            Dominican Republic
+          </p>
+          <p>
+            <img src="../assets/svg/peers.svg" alt="" />
+            Any
+          </p>
+          <p>
+            <img src="../assets/svg/calendar.svg" alt="" />
+            Any
+          </p>
+          <ul>
+            <p>
+              <img src="../assets/svg/coin.svg" alt="" />
+              <b>$175</b>
+            </p>
+            <button>View</button>
+          </ul>
+        </div>
+      </div>
+
+      <div class="hotelCard tours">
+        <div class="hotelImg">
+          <img src="../assets/images/hotel.jpg" alt="" />
+        </div>
+        <div class="hotelInfo">
+          <div class="rating"></div>
+          <h1>Island Adventure Expeditions</h1>
+          <p>
+            <img src="../assets/svg/cardLocation.svg" alt="" />
+            Dominican Republic
+          </p>
+          <p>
+            <img src="../assets/svg/peers.svg" alt="" />
+            Any
+          </p>
+          <p>
+            <img src="../assets/svg/calendar.svg" alt="" />
+            Any
+          </p>
+          <ul>
+            <p>
+              <img src="../assets/svg/coin.svg" alt="" />
+              <b>$175</b>
+            </p>
+            <button>View</button>
+          </ul>
+        </div>
+      </div>
+
+      <div class="hotelCard tours">
+        <div class="hotelImg">
+          <img src="../assets/images/hotel.jpg" alt="" />
+        </div>
+        <div class="hotelInfo">
+          <div class="rating"></div>
+          <h1>Tropical Discovery Package</h1>
+          <p>
+            <img src="../assets/svg/cardLocation.svg" alt="" />
+            Dominican Republic
+          </p>
+          <p>
+            <img src="../assets/svg/peers.svg" alt="" />
+            Any
+          </p>
+          <p>
+            <img src="../assets/svg/calendar.svg" alt="" />
+            Any
+          </p>
+          <ul>
+            <p>
+              <img src="../assets/svg/coin.svg" alt="" />
+              <b>$175</b>
+            </p>
+            <button>View</button>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="hotelCard tours">
+        <div class="hotelImg">
+          <img src="../assets/images/hotel.jpg" alt="" />
+        </div>
+        <div class="hotelInfo">
+          <div class="rating"></div>
+          <h1>Paradise Island Tours</h1>
+          <p>
+            <img src="../assets/svg/cardLocation.svg" alt="" />
+            Dominican Republic
+          </p>
+          <p>
+            <img src="../assets/svg/peers.svg" alt="" />
+            Any
+          </p>
+          <p>
+            <img src="../assets/svg/calendar.svg" alt="" />
+            Any
+          </p>
+          <ul>
+            <p>
+              <img src="../assets/svg/coin.svg" alt="" />
+              <b>$175</b>
+            </p>
+            <button>View</button>
+          </ul>
+        </div>
+      </div>
+
+      <div class="hotelCard destinations">
+        <div class="hotelImg">
+          <img src="../assets/images/hotel.jpg" alt="" />
+        </div>
+        <div class="hotelInfo">
+          <div class="rating"></div>
+          <h1>Mystical Mountain Lodge</h1>
+          <p>
+            <img src="../assets/svg/cardLocation.svg" alt="" />
+            Dominican Republic
+          </p>
+          <p>
+            <img src="../assets/svg/peers.svg" alt="" />
+            Any
+          </p>
+          <p>
+            <img src="../assets/svg/calendar.svg" alt="" />
+            Any
+          </p>
+          <ul>
+            <p>
+              <img src="../assets/svg/coin.svg" alt="" />
+              <b>$175</b>
+            </p>
+            <button>View</button>
+          </ul>
+        </div>
+      </div>
+
+      <div class="hotelCard destinations">
+        <div class="hotelImg">
+          <img src="../assets/images/hotel.jpg" alt="" />
+        </div>
+        <div class="hotelInfo">
+          <div class="rating"></div>
+          <h1>Enchanted Valleys Resort</h1>
+          <p>
+            <img src="../assets/svg/cardLocation.svg" alt="" />
+            Dominican Republic
+          </p>
+          <p>
+            <img src="../assets/svg/peers.svg" alt="" />
+            Any
+          </p>
+          <p>
+            <img src="../assets/svg/calendar.svg" alt="" />
+            Any
+          </p>
+          <ul>
+            <p>
+              <img src="../assets/svg/coin.svg" alt="" />
+              <b>$175</b>
+            </p>
+            <button>View</button>
+          </ul>
+        </div>
+      </div>
+
+      <div class="hotelCard destinations">
+        <div class="hotelImg">
+          <img src="../assets/images/hotel.jpg" alt="" />
+        </div>
+        <div class="hotelInfo">
+          <div class="rating"></div>
+          <h1>Serenity Vista Haven</h1>
+          <p>
+            <img src="../assets/svg/cardLocation.svg" alt="" />
+            Dominican Republic
+          </p>
+          <p>
+            <img src="../assets/svg/peers.svg" alt="" />
+            Any
+          </p>
+          <p>
+            <img src="../assets/svg/calendar.svg" alt="" />
+            Any
+          </p>
+          <ul>
+            <p>
+              <img src="../assets/svg/coin.svg" alt="" />
+              <b>$175</b>
+            </p>
+            <button>View</button>
+          </ul>
+        </div>
+      </div>
+
+      <div class="hotelCard destinations">
+        <div class="hotelImg">
+          <img src="../assets/images/hotel.jpg" alt="" />
+        </div>
+        <div class="hotelInfo">
+          <div class="rating"></div>
+          <h1>Wildflower Escape Inn</h1>
+          <p>
+            <img src="../assets/svg/cardLocation.svg" alt="" />
+            Dominican Republic
+          </p>
+          <p>
+            <img src="../assets/svg/peers.svg" alt="" />
+            Any
+          </p>
+          <p>
+            <img src="../assets/svg/calendar.svg" alt="" />
+            Any
+          </p>
+          <ul>
+            <p>
+              <img src="../assets/svg/coin.svg" alt="" />
+              <b>$175</b>
+            </p>
+            <button>View</button>
+          </ul>
+        </div>
+      </div>
+
+      <div class="hotelCard excursions">
+        <div class="hotelImg">
+          <img src="../assets/images/hotel.jpg" alt="" />
+        </div>
+        <div class="hotelInfo">
+          <div class="rating"></div>
+          <h1>Jungle Thrill Adventures</h1>
+          <p>
+            <img src="../assets/svg/cardLocation.svg" alt="" />
+            Dominican Republic
+          </p>
+          <p>
+            <img src="../assets/svg/peers.svg" alt="" />
+            Any
+          </p>
+          <p>
+            <img src="../assets/svg/calendar.svg" alt="" />
+            Any
+          </p>
+          <ul>
+            <p>
+              <img src="../assets/svg/coin.svg" alt="" />
+              <b>$175</b>
+            </p>
+            <button>View</button>
+          </ul>
+        </div>
+      </div>
+
+      <div class="hotelCard excursions">
+        <div class="hotelImg">
+          <img src="../assets/images/hotel.jpg" alt="" />
+        </div>
+        <div class="hotelInfo">
+          <div class="rating"></div>
+          <h1>Waterfall Discovery Quest</h1>
+          <p>
+            <img src="../assets/svg/cardLocation.svg" alt="" />
+            Dominican Republic
+          </p>
+          <p>
+            <img src="../assets/svg/peers.svg" alt="" />
+            Any
+          </p>
+          <p>
+            <img src="../assets/svg/calendar.svg" alt="" />
+            Any
+          </p>
+          <ul>
+            <p>
+              <img src="../assets/svg/coin.svg" alt="" />
+              <b>$175</b>
+            </p>
+            <button>View</button>
+          </ul>
+        </div>
+      </div>
+
+      <div class="hotelCard excursions">
+        <div class="hotelImg">
+          <img src="../assets/images/hotel.jpg" alt="" />
+        </div>
+        <div class="hotelInfo">
+          <div class="rating"></div>
+          <h1>Reef Explorer Diving</h1>
+          <p>
+            <img src="../assets/svg/cardLocation.svg" alt="" />
+            Dominican Republic
+          </p>
+          <p>
+            <img src="../assets/svg/peers.svg" alt="" />
+            Any
+          </p>
+          <p>
+            <img src="../assets/svg/calendar.svg" alt="" />
+            Any
+          </p>
+          <ul>
+            <p>
+              <img src="../assets/svg/coin.svg" alt="" />
+              <b>$175</b>
+            </p>
+            <button>View</button>
+          </ul>
+        </div>
+      </div>
+
+      <div class="hotelCard excursions">
+        <div class="hotelImg">
+          <img src="../assets/images/hotel.jpg" alt="" />
+        </div>
+        <div class="hotelInfo">
+          <div class="rating"></div>
+          <h1>Sunset Sailing Expedition</h1>
+          <p>
+            <img src="../assets/svg/cardLocation.svg" alt="" />
+            Dominican Republic
+          </p>
+          <p>
+            <img src="../assets/svg/peers.svg" alt="" />
+            Any
+          </p>
+          <p>
+            <img src="../assets/svg/calendar.svg" alt="" />
+            Any
+          </p>
+          <ul>
+            <p>
+              <img src="../assets/svg/coin.svg" alt="" />
+              <b>$175</b>
+            </p>
+            <button>View</button>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- ! /////////////////////////////////////////////////////////// -->
+    <!-- ! /////////////////////////////////////////////////////////// -->
+    <!-- ! /////////////////////////////////////////////////////////// -->
+
+    <footer id="contact">
+      <div class="footerPrimary">
+        <div class="footerLogo">
+          <img src="../assets/logo.png" alt="" />
+          <h1>Tra<span>vello</span></h1>
+        </div>
+        <ul>
+          <a href="#"><img src="../assets/svg/facebook.svg" alt="" /></a>
+          <a href="#"><img src="../assets/svg/x.svg" alt="" /></a>
+          <a href="#"><img src="../assets/svg/instagram.svg" alt="" /></a>
+          <a href="#"><img src="../assets/svg/linkedIn.svg" alt="" /></a>
+        </ul>
+      </div>
+
+      <div class="footerLinks">
+        <ul>
+          <b>Quick links</b>
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Services</a>
+          <a href="#">Tours</a>
+          <a href="#">Sign in</a>
+        </ul>
+        <ul>
+          <b>Support</b>
+          <a href="#">Contact us</a>
+          <a href="#">FAQs</a>
+        </ul>
+      </div>
+
+      <div class="footerInput">
+        <h1>Get updates</h1>
+        <div>
+          <input type="email" placeholder="Enter your email" />
+          <button>Submit</button>
+        </div>
+        <ul>
+          <a href="#">Privacy & policy</a>
+          <a href="#">Terms of service</a>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/lenis@1.3.13/dist/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <!-- It also includes Destination.js -->
+    <script src="../js/discover.js"></script>
+  </body>
+</html>

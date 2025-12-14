@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  --accent_clr: #158dd8;
+  --accent_lte: #79cbff;
+  --accent_lte2: #dff3ff;
+  --accent_trp: color-mix(in srgb, var(--accent_clr), #0000 80%);
+  --accent_trp2: color-mix(in srgb, var(--accent_clr), #0000 90%);
+  --green: #00d246;
+  --yellow: #e4be00;
+
+  --numeric: "IBM Plex Mono", monospace;
+  --padding: 60px;
+  --elasetic: linear(
+    0,
+    0.008 1.1%,
+    0.034 2.3%,
+    0.134 4.9%,
+    0.264 7.3%,
+    0.683 14.3%,
+    0.797 16.5%,
+    0.89 18.6%,
+    0.967 20.7%,
+    1.027 22.8%,
+    1.073 25%,
+    1.104 27.3%,
+    1.123 30.6%,
+    1.119 34.3%,
+    1.018 49.5%,
+    0.988 58.6%,
+    0.985 65.2%,
+    1 84.5%,
+    1
+  );
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.4s all ease;
+  scroll-behavior: smooth;
+  font-family: "Inter", sans-serif;
+}
+
+::before,
+::after {
+  transition: 0.4s all ease;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+a:hover {
+  color: var(--accent_clr);
+  opacity: 1;
+}
+
+button {
+  display: flex;
+  background: var(--accent_clr);
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+
+  &:hover {
+    background: var(--accent_lte);
+  }
+}
+
+button a:hover {
+  color: #fff;
+}
+
+button:not(:has(a)) {
+  padding: 8px 25px;
+}
+
+input {
+  outline: none;
+  border: 1px solid #fff4;
+  padding-left: 8px;
+  border-radius: 10px;
+  background: #fff9;
+}
+
+img {
+  user-select: none;
+}
+
+button:has(a) {
+  width: 100%;
+  height: fit-content !important;
+  padding: 0 !important;
+}
+
+button a {
+  width: 100%;
+  padding: 10px 35px;
+}
+
+/* ! ||||||||||||||||||||||||||||||||||||||| */
+/* ! ||||||||||||||||||||||||||||||||||||||| */
+/* ! ||||||||||||||||||||||||||||||||||||||| */
+
+body {
+  background: radial-gradient(var(--accent_lte2), #fff);
+  background-size: 150% 150%;
+  background-position: center;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+form {
+  width: 500px;
+  box-shadow: 0 6px 20px #0001;
+  border-radius: 20px;
+  overflow: clip;
+  background: #fff5;
+  border: 1px solid #0005;
+}
+
+form.active .formWrapper {
+  transform: translateX(calc(-50% - 15px));
+}
+
+nav {
+  width: fit-content;
+  border: 1px solid #0005;
+  background: #fff5;
+  padding: 5px;
+  display: flex;
+  gap: 10px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px #0001;
+  margin: 8px auto;
+  position: relative;
+  isolation: isolate;
+  overflow: clip;
+}
+
+nav button {
+  padding: 12px 30px;
+  background: none !important;
+}
+
+nav.active button:nth-child(1),
+nav button:nth-child(2) {
+  color: var(--accent_clr);
+}
+
+nav.active button:nth-child(2) {
+  color: #fff;
+}
+
+nav::before {
+  content: "";
+  height: 100%;
+  width: calc(50% + 5px);
+  position: absolute;
+  z-index: -1;
+  background: var(--accent_clr);
+  top: 0;
+  left: 0;
+  border-radius: 15px;
+  transition-timing-function: var(--elasetic);
+}
+
+nav.active::before {
+  transform: translateX(100%);
+}
+
+.formWrapper {
+  width: fit-content;
+  height: 100%;
+  display: flex;
+  gap: 30px;
+  transition-timing-function: var(--elasetic);
+}
+
+form.active .signUpContainer {
+  height: 100px;
+}
+
+.signUpContainer {
+  width: 500px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formWrapper label {
+  display: grid;
+  gap: 4px;
+  color: #0009;
+  font-weight: 600;
+}
+
+.formWrapper label input:not(input#terms) {
+  width: 100%;
+  height: 45px;
+  border: 1px solid #0003;
+  padding-left: 10px;
+}
+
+.formWrapper .signUpContainer > div {
+  display: flex;
+  gap: 8px;
+}
+input#terms {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+}
+
+.formWrapper button {
+  padding: 15px;
+}
+
+.logInContainer {
+  width: 500px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}

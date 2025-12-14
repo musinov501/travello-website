@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  --accent_clr: #158dd8;
+  --accent_lte: #79cbff;
+  --accent_lte2: #dff3ff;
+  --accent_trp: color-mix(in srgb, var(--accent_clr), #0000 80%);
+  --accent_trp2: color-mix(in srgb, var(--accent_clr), #0000 90%);
+  --green: #00d246;
+  --yellow: #e4be00;
+
+  --numeric: "IBM Plex Mono", monospace;
+  --padding: 60px;
+  --elasetic: linear(
+    0,
+    0.008 1.1%,
+    0.034 2.3%,
+    0.134 4.9%,
+    0.264 7.3%,
+    0.683 14.3%,
+    0.797 16.5%,
+    0.89 18.6%,
+    0.967 20.7%,
+    1.027 22.8%,
+    1.073 25%,
+    1.104 27.3%,
+    1.123 30.6%,
+    1.119 34.3%,
+    1.018 49.5%,
+    0.988 58.6%,
+    0.985 65.2%,
+    1 84.5%,
+    1
+  );
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.4s all ease;
+  scroll-behavior: smooth;
+  font-family: "Inter", sans-serif;
+}
+
+::before,
+::after {
+  transition: 0.4s all ease;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+a:hover {
+  color: var(--accent_clr);
+  opacity: 1;
+}
+
+button {
+  display: flex;
+  background: var(--accent_clr);
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+
+  &:hover {
+    background: var(--accent_lte);
+  }
+}
+
+button a:hover {
+  color: #fff;
+}
+
+button:not(:has(a)) {
+  padding: 8px 25px;
+}
+
+input {
+  outline: none;
+  border: 1px solid #fff4;
+  padding-left: 8px;
+  border-radius: 10px;
+  background: #fff9;
+}
+
+img {
+  user-select: none;
+}
+
+button:has(a) {
+  width: fit-content !important;
+  height: fit-content !important;
+  padding: 0 !important;
+}
+
+button a {
+  width: 100%;
+  padding: 10px 35px;
+}
+
+/* ! ||||||||||||||||||||||||||||||||||||||| */
+/* ! ||||||||||||||||||||||||||||||||||||||| */
+/* ! ||||||||||||||||||||||||||||||||||||||| */
+
+.bookingContainer {
+  width: calc(100% - (var(--padding) * 2));
+  display: flex;
+  margin: 100px var(--padding) 40px;
+  overflow: clip;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #0001;
+}
+
+.bookingContainer > * {
+  width: 50%;
+}
+
+.bookingImg {
+  position: relative;
+  height: 580px;
+  min-height: 50vh;
+  background: var(--accent_trp2);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  isolation: isolate;
+  gap: 10px;
+}
+
+.bookingImg > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: -5;
+  top: 0;
+  left: 0;
+}
+
+.bookingImg::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to top, #0000, #0009);
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(15px);
+  mask-image: linear-gradient(to top, #0000 -20%, #000 70%);
+}
+
+.bookingImg h1 {
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 400;
+}
+.bookingImg p {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #fff;
+  opacity: 0.8;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.bookingImg p img {
+  width: 25px;
+  height: 25px;
+}
+
+.bookingRate {
+  width: calc(20px * 5);
+  height: 20px;
+  background-image: url(../assets/svg/star.svg);
+  background-size: 20px 20px;
+  background-position: center;
+  background-repeat: repeat-x;
+}
+
+.bookingInput {
+  padding: 20px;
+  background: #0001;
+  display: flex;
+  flex-direction: column;
+}
+
+.bookingInput h1 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--accent_clr);
+}
+
+.bookingInput ul {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 5px 0;
+}
+
+.bookingInput ul label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #0009;
+}
+
+.bookingInput ul label input {
+  height: 40px;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid #0005;
+  box-shadow: 0 0 10px #0001;
+}
+
+.bookingInput ul:has(button) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bookingInput ul:has(button) h2:not(b) {
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+
+.bookingInput ul:has(button) h2 b {
+  color: var(--accent_clr);
+}
