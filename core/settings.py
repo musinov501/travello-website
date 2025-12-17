@@ -98,7 +98,7 @@ REST_FRAMEWORK = {
     # 'DEFAULT_RENDERER_CLASSES': [
     #     'rest_framework.renderers.JSONRenderer',
     # ],
-    # 'PAGE_SIZE': 10,
+    'PAGE_SIZE': 10,
     # 'EXCEPTION_HANDLER': 'apps.shared.exceptions.handler.custom_exception_handler',
     
 }
@@ -107,7 +107,7 @@ REST_FRAMEWORK = {
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [ BASE_DIR / 'frontend' ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -169,6 +169,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATICFILES_DIRS = [ BASE_DIR / 'frontend' ]
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'

@@ -2,12 +2,15 @@ from rest_framework import generics, permissions
 from apps.tours.models.tours import Tour
 from apps.tours.serializers.tour_serializer import TourSerializer
 from apps.shared.utils.custom_response import CustomResponse
+from rest_framework.parsers import MultiPartParser, FormParser
 
 
 class TourListView(generics.ListAPIView):
     queryset = Tour.objects.filter(status=True)
     serializer_class = TourSerializer
     permission_classes = [permissions.AllowAny]
+    pagination_class = None
+    
 
     def list(self, request, *args, **kwargs):
         serializer = self.get_serializer(self.get_queryset(), many=True)
@@ -41,6 +44,7 @@ class TourCreateView(generics.CreateAPIView):
     queryset = Tour.objects.all()
     serializer_class = TourSerializer
     permission_classes = [permissions.IsAdminUser]
+    parser_classes = (MultiPartParser, FormParser)
 
     def create(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
@@ -64,6 +68,7 @@ class TourUpdateView(generics.UpdateAPIView):
     queryset = Tour.objects.all()
     serializer_class = TourSerializer
     permission_classes = [permissions.IsAdminUser]
+    parser_classes = (MultiPartParser, FormParser)
 
     def update(self, request, *args, **kwargs):
         try:
